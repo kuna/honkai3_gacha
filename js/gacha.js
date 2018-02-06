@@ -369,25 +369,25 @@ var Gacha = function(dist, pickup_ids) {
         prob_recalc[i] = dist[i] / prob_sum;
     }
     prob_accumlated += prob_recalc['b_valkyrie'];
-    range_table['valkyrie'][4] = prob_accumlated;
+    range_table['valkyrie'][2] = prob_accumlated;
     prob_accumlated += prob_recalc['a_valkyrie'];
-    range_table['valkyrie'][4] = prob_accumlated;
+    range_table['valkyrie'][3] = prob_accumlated;
     prob_accumlated += prob_recalc['s_valkyrie'];
     range_table['valkyrie'][4] = prob_accumlated;
     prob_accumlated += prob_recalc['a_valkyrie_piece'];
-    range_table['valkyrie_piece'][4] = prob_accumlated;
+    range_table['valkyrie_piece'][3] = prob_accumlated;
     prob_accumlated += prob_recalc['s_valkyrie_piece'];
     range_table['valkyrie_piece'][4] = prob_accumlated;
     prob_accumlated += prob_recalc['b_weapon'];
-    range_table['weapon'][4] = prob_accumlated;
+    range_table['weapon'][2] = prob_accumlated;
     prob_accumlated += prob_recalc['a_weapon'];
-    range_table['weapon'][4] = prob_accumlated;
+    range_table['weapon'][3] = prob_accumlated;
     prob_accumlated += prob_recalc['s_weapon'];
     range_table['weapon'][4] = prob_accumlated;
     prob_accumlated += prob_recalc['b_stigmata'];
-    range_table['stigmata'][4] = prob_accumlated;
+    range_table['stigmata'][2] = prob_accumlated;
     prob_accumlated += prob_recalc['a_stigmata'];
-    range_table['stigmata'][4] = prob_accumlated;
+    range_table['stigmata'][3] = prob_accumlated;
     prob_accumlated += prob_recalc['s_stigmata'];
     range_table['stigmata'][4] = prob_accumlated;
     // generate: pickup
@@ -406,8 +406,8 @@ var Gacha = function(dist, pickup_ids) {
         pickup_table[ obj.type ][ obj.rare-1 ].push(obj);
     }
     pickup_table['pickups'] = pickup_ids;
-    //console.log(range_table);
-    //console.log(pickup_table);
+    console.log(range_table);
+    console.log(pickup_table);
 
     var gacha = new function() {
         this._gacha = function (rnd_val) {
@@ -436,7 +436,6 @@ var Gacha = function(dist, pickup_ids) {
                         }
                         // if then, select in that category!
                         var _rnd = Math.random();
-                        console.log(lst);
                         var _idx = Math.floor(lst.length * _rnd);
                         return lst[_idx];
                     }
