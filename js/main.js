@@ -35,7 +35,6 @@ function do_gacha(v)
     var rare = ["","★★","★★★","★★★★","★★★★★"];
 
     var r = gacha.gacha();
-    console.log(r);
     var imgsrc = 'img/'+r.img;
     $('#pic_img_l').attr('src', imgsrc);
     $('#name_l').text(r.name);
@@ -43,7 +42,7 @@ function do_gacha(v)
     $('#r_left').attr('class', 'resultbg r_left '+bg_cls[r.rare-1]);
 
     // add to material list
-    $('#items').append( '<div class="item"><img src="'+ imgsrc + '"></div>' );
+    $('#items').append( '<div class="item itemtype-'+r.type+' itemrare'+r.rare+'"><img src="'+ imgsrc + '"><div class="hidden desc">'+r.name+'</div></div>' );
     
     // update gacha tables
     stats[r.type][r.rare-1] += 1;
@@ -140,7 +139,7 @@ $(function() {
         if (events.length > 0) return;
         events.push({'action':'video', 'value':null, 'time':5000});
         events.push({'action':'endvideo', 'value':null, 'time':0});
-        events.push({'action':'gacha', 'value':null, 'time':1000});
+        events.push({'action':'gacha', 'value':null, 'time':1500});
         runevents();
     });
     $('#gacha-10').click(function() {
@@ -148,16 +147,16 @@ $(function() {
         if (events.length > 0) return;
         events.push({'action':'video', 'value':null, 'time':5000});
         events.push({'action':'endvideo', 'value':null, 'time':0});
-        events.push({'action':'gacha', 'value':null, 'time':1000});
-        events.push({'action':'gacha', 'value':null, 'time':1000});
-        events.push({'action':'gacha', 'value':null, 'time':1000});
-        events.push({'action':'gacha', 'value':null, 'time':1000});
-        events.push({'action':'gacha', 'value':null, 'time':1000});
-        events.push({'action':'gacha', 'value':null, 'time':1000});
-        events.push({'action':'gacha', 'value':null, 'time':1000});
-        events.push({'action':'gacha', 'value':null, 'time':1000});
-        events.push({'action':'gacha', 'value':null, 'time':1000});
-        events.push({'action':'gacha', 'value':null, 'time':1000});
+        events.push({'action':'gacha', 'value':null, 'time':1500});
+        events.push({'action':'gacha', 'value':null, 'time':1500});
+        events.push({'action':'gacha', 'value':null, 'time':1500});
+        events.push({'action':'gacha', 'value':null, 'time':1500});
+        events.push({'action':'gacha', 'value':null, 'time':1500});
+        events.push({'action':'gacha', 'value':null, 'time':1500});
+        events.push({'action':'gacha', 'value':null, 'time':1500});
+        events.push({'action':'gacha', 'value':null, 'time':1500});
+        events.push({'action':'gacha', 'value':null, 'time':1500});
+        events.push({'action':'gacha', 'value':null, 'time':1500});
         runevents();
     });
     $('#skip').click(function() {

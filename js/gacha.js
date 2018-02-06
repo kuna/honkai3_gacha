@@ -20,9 +20,9 @@ var ids = [
     {'type':'valkyrie', 'name':'발키리 개선', 'rare':4, 'img':'valkyrie/himeko_c4.png'},
     {'type':'valkyrie', 'name':'핏빛 장미', 'rare':5, 'img':'valkyrie/himeko_c5.png'},
     
-    {'type':'valkyrie', 'name':'역신 무녀', 'rare':4, 'img':'valkyrie/sakura_c1.png'},
-    {'type':'valkyrie', 'name':'진염행혼', 'rare':4, 'img':'valkyrie/sakura_c3-2.png'},
-    {'type':'valkyrie', 'name':'헌신화 물망초', 'rare':5, 'img':'valkyrie/sakura_c2.png'},
+    {'type':'valkyrie', 'name':'역신 무녀', 'rare':4, 'img':'valkyrie/sakura_c1.png', 'special':true},
+    {'type':'valkyrie', 'name':'진염행혼', 'rare':4, 'img':'valkyrie/sakura_c3-2.png', 'special':true},
+    {'type':'valkyrie', 'name':'헌신화 물망초', 'rare':5, 'img':'valkyrie/sakura_c2.png', 'special':true},
     
     {'type':'valkyrie', 'name':'발키리 서약', 'rare':4, 'img':'valkyrie/theresa_c1_icon.png'},
     {'type':'valkyrie', 'name':'처형복 반혼초', 'rare':5, 'img':'valkyrie/theresa_c2_icon.png'},
@@ -49,9 +49,9 @@ var ids = [
     {'type':'valkyrie_piece', 'name':'발키리 개선 조각', 'rare':4, 'img':'valkyrie/piece.png'},
     {'type':'valkyrie_piece', 'name':'핏빛 장미 조각', 'rare':5, 'img':'valkyrie/piece.png'},
     
-    {'type':'valkyrie_piece', 'name':'역신 무녀 조각', 'rare':4, 'img':'valkyrie/piece.png'},
-    {'type':'valkyrie_piece', 'name':'진염행혼 조각', 'rare':4, 'img':'valkyrie/piece.png'},
-    {'type':'valkyrie_piece', 'name':'헌신화 물망초 조각', 'rare':5, 'img':'valkyrie/piece.png'},
+    {'type':'valkyrie_piece', 'name':'역신 무녀 조각', 'rare':4, 'img':'valkyrie/piece.png', 'special':true},
+    {'type':'valkyrie_piece', 'name':'진염행혼 조각', 'rare':4, 'img':'valkyrie/piece.png', 'special':true},
+    {'type':'valkyrie_piece', 'name':'헌신화 물망초 조각', 'rare':5, 'img':'valkyrie/piece.png', 'special':true},
     
     {'type':'valkyrie_piece', 'name':'발키리 서약 조각', 'rare':4, 'img':'valkyrie/piece.png'},
     {'type':'valkyrie_piece', 'name':'처형복 반혼초 조각', 'rare':5, 'img':'valkyrie/piece.png'},
@@ -267,21 +267,21 @@ var ids = [
 
 
 
-    {'type':'material', 'name':'초급 학습 칩', 'rare':4, 'img':'material/Biological-EXP-Chip.jpg'},
-    {'type':'material', 'name':'붕괴수의 주먹', 'rare':4, 'img':'material/fund.jpg'},
-    {'type':'material', 'name':'텅스텐 합급 흉갑', 'rare':4, 'img':'material/fund.jpg'},
-    {'type':'material', 'name':'중급 학습 칩', 'rare':4, 'img':'material/Biological-EXP-Chip.jpg'},
-    {'type':'material', 'name':'티타늅 합금 총신', 'rare':4, 'img':'material/fund.jpg'},
-    {'type':'material', 'name':'붕괴수의 날개', 'rare':4, 'img':'material/fund.jpg'},
-    {'type':'material', 'name':'항공 장갑', 'rare':4, 'img':'material/fund.jpg'},
-    {'type':'material', 'name':'끊어진 칼자루', 'rare':4, 'img':'material/fund.jpg'},
-    {'type':'material', 'name':'초소형 반응로', 'rare':4, 'img':'material/fund.jpg'},
-    {'type':'material', 'name':'이리튬 점화 플러그', 'rare':4, 'img':'material/fund.jpg'},
-    {'type':'material', 'name':'초합금 방패', 'rare':5, 'img':'material/fund.jpg'},
-    {'type':'material', 'name':'상전이 거울', 'rare':5, 'img':'material/fund.jpg'},
-    {'type':'material', 'name':'테슬라 터빈', 'rare':5, 'img':'material/fund.jpg'},
-    {'type':'material', 'name':'쌍둥이 영혼 결정', 'rare':5, 'img':'material/Weapon_EXP4-icon.jpg'},
-    {'type':'material', 'name':'쌍둥이 에테르 결정체', 'rare':5, 'img':'material/Stigmata_EXP.jpg'},
+    {'type':'material', 'name':'초급 학습 칩', 'rare':4, 'img':'material/Biological-EXP-Chip.png'},
+    {'type':'material', 'name':'붕괴수의 주먹', 'rare':4, 'img':'material/fund.png'},
+    {'type':'material', 'name':'텅스텐 합급 흉갑', 'rare':4, 'img':'material/fund.png'},
+    {'type':'material', 'name':'중급 학습 칩', 'rare':4, 'img':'material/Biological-EXP-Chip.png'},
+    {'type':'material', 'name':'티타늅 합금 총신', 'rare':4, 'img':'material/fund.png'},
+    {'type':'material', 'name':'붕괴수의 날개', 'rare':4, 'img':'material/fund.png'},
+    {'type':'material', 'name':'항공 장갑', 'rare':4, 'img':'material/fund.png'},
+    {'type':'material', 'name':'끊어진 칼자루', 'rare':4, 'img':'material/fund.png'},
+    {'type':'material', 'name':'초소형 반응로', 'rare':4, 'img':'material/fund.png'},
+    {'type':'material', 'name':'이리튬 점화 플러그', 'rare':4, 'img':'material/fund.png'},
+    {'type':'material', 'name':'초합금 방패', 'rare':5, 'img':'material/fund.png'},
+    {'type':'material', 'name':'상전이 거울', 'rare':5, 'img':'material/fund.png'},
+    {'type':'material', 'name':'테슬라 터빈', 'rare':5, 'img':'material/fund.png'},
+    {'type':'material', 'name':'쌍둥이 영혼 결정', 'rare':5, 'img':'material/Weapon_EXP4-icon.png'},
+    {'type':'material', 'name':'쌍둥이 에테르 결정체', 'rare':5, 'img':'material/Stigmata_EXP.png'},
 ];
 
 
@@ -299,6 +299,7 @@ var gacha_dist_normal = {
     'b_stigmata': 44.40,
     'pickups': [],
     'material': 0,
+    'special': false
 };
 
 var gacha_dist_valkyrie = {
@@ -316,6 +317,7 @@ var gacha_dist_valkyrie = {
     // S, A, S_piece, A_piece
     'pickups': [1.5, 4.5, 4.5, 7.5],
     'material': 66,
+    'special': false
 };
 
 var gacha_dist_weapon = {
@@ -333,6 +335,7 @@ var gacha_dist_weapon = {
     // weapon, stigmata
     'pickups': [4.48, 1.44, 1.44, 1.44],
     'material': 0,
+    'special': false
 };
 
 var Gacha = function(dist, pickup_ids) {
@@ -365,9 +368,22 @@ var Gacha = function(dist, pickup_ids) {
     var prob_sum = 0;
     var prob_recalc = {};
     for (var i in dist) {
+        if (i == 'special') continue;
+        if (i == 'pickups') {
+            for (var j=0; j<dist['pickups'].length; j++)
+                prob_sum += dist['pickups'][j];
+            continue;
+        }
         prob_sum += dist[i];
     }
     for (var i in dist) {
+        if (i == 'special') continue;
+        if (i == 'pickups') {
+            prob_recalc['pickups'] = [];
+            for (var j=0; j<dist['pickups'].length; j++)
+                prob_recalc['pickups'].push( dist['pickups'][j] / prob_sum );
+            continue;
+        }
         prob_recalc[i] = dist[i] / prob_sum;
     }
     prob_accumlated += prob_recalc['b_valkyrie'];
@@ -404,7 +420,15 @@ var Gacha = function(dist, pickup_ids) {
         var obj = ids[i];
         if (i in pickup_ids) { continue; }       // exclude pickup from general list
         if (obj.type == 'material')
-        { pickup_table[ obj.type ].push(obj); continue; }
+        {
+            // material - treated differently
+            pickup_table[ obj.type ].push(obj);
+            continue;
+        }
+        if (dist.special == false && obj.special == true) {
+            // exclude some special characters (ex: sakura yae)
+            continue;
+        }
         pickup_table[ obj.type ][ obj.rare-1 ].push(obj);
     }
     pickup_table['pickups'] = pickup_ids;
