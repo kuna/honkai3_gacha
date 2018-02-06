@@ -1,0 +1,102 @@
+<html>
+    <head>
+        <title>Honkai 3rd Gacha Simulator</title>
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+        <div id="container">
+            <div class="row">
+                <div class="title"><h3>붕괴3 가챠 시뮬레이터</h3></div>
+            </div>
+            <div class="row">
+                <div id="scenecontainer">
+                    <div class="skip"><button id="skip" class="btn btn-normal">SKIP</button></div>
+                    <div class="scene" id="scenedokidoki">
+                        <video width="776" height="428">
+                            <source src="img/effect/gacha.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="scene" id="sceneresult">
+                        <div class="resultbg r_left lv3" id="r_left">
+                            <div id="pic_l" class="pic"><img id="pic_img_l" width=100%></div>
+                            <div id="name_l" class="name">ABC</div>
+                            <div id="rare_l" class="rare">★★★★</div>
+                        </div>
+                        <div class="resultbg r_right lv2" id="r_right">
+                            <div id="pic_r" class="pic"><img id="pic_img_r" width=100%></div>
+                            <div id="name_r" class="name">ABC</div>
+                            <div id="rare_r" class="rare">★★</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row content">
+                <div class="left">
+                    <h3>뽑기 선택 <button id="selectpickup">픽업 선택</button> <button id="clear">초기화</button></h3>
+                    <div class="choose">
+                        <button class="btn btn-normal" id="gacha-1">단차</button>
+                        <button class="btn btn-special" id="gacha-10">10연차</button>
+                    </div>
+                </div>
+                <div class="right">
+                    <h3>결과표</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>5성</th>
+                                <th>4성</th>
+                                <th>3성</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>성흔</td>
+                                <td><span id="stig5">0</span></td>
+                                <td><span id="stig4">0</span></td>
+                                <td><span id="stig3">0</span></td>
+                            </tr>
+                            <tr>
+                                <td>무기</td>
+                                <td><span id="wea5">0</span></td>
+                                <td><span id="wea4">0</span></td>
+                                <td><span id="wea3">0</span></td>
+                            </tr>
+                            <tr>
+                                <td>발키리</td>
+                                <td><span id="val5">0</span></td>
+                                <td><span id="val4">0</span></td>
+                                <td><span id="val3">0</span></td>
+                            </tr>
+                            <tr>
+                                <td>발키리 조각</td>
+                                <td><span id="valp5">0</span></td>
+                                <td><span id="valp4">0</span></td>
+                                <td><span id="valp3">0</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div style="margin-top:15px;">
+                        <img src="img/jewel.png" width=20>
+                        <span class="detail detail1" id="jewel">0</span>
+                        <span class="detail detail2">(가챠 횟수 <span id="count">0</span>번)</span>
+                    </div>
+                </div>
+            </div>
+            <div class="row content">
+                <h3>획득한 아이템</h3>
+                <div id="items">
+                </div>
+            </div>
+
+            <div class="row">
+                Honkai 3rd gacha simulator by @lazykuna. I do not own the rights to images and resources related to Honkai 3rd. Simulated gacha probability and rotation may be different from real game, so just take this for fun. All rights reserved to MIHOYO.
+            </div>
+        </div>
+
+
+        <script src="js/jquery.min.js"></script>
+        <script src="js/gacha.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>

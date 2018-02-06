@@ -1,0 +1,62 @@
+body { margin: 0; padding: 0; background: url('../img/bg.jpg') center top no-repeat #120c00; background-size: 100%;
+    font-size: 9pt; color: #fff; }
+#container { width:780px; margin: 0 auto; }
+#container .title h3 { display: none; }
+#container .title { background: url('../img/title.png') 0 0 no-repeat; width: 100%; height: 100px; margin-top: 30px; }
+
+.row { margin-bottom: 30px; clear:both; overflow:hidden;  }
+.row.content { background-color: rgba(0,60,120,0.5); padding: 20px; }
+.row h3 { border-bottom: 1px solid #999; color:rgb(255, 230, 80);
+    text-shadow: 0 0 20px #fff ;
+    font-size: 12pt; padding: 0 0 10px 0; margin: 0 0 20px 0; }
+.left { float: left; }
+.right { float: right; }
+.left, .right { width: 360px; }
+
+.row table { width: 100%; background: #f0f0f0; color: #333; font-size: 10pt; border-collapse: collapse; border-spacing: 0; }
+.row thead tr { background: #789; }
+.row td, .row th { padding: 5px; border: 1px solid #666; }
+.row tr td:first-child { background:#89c; }
+
+.choose { width: 100%; clear:both; text-align: center; margin-top:60px; }
+.choose button { width: 100px; margin-right: 10px; }
+.detail2 { color:#ccc; float:right; } /* (가챠 횟수: x번) */
+
+#scenecontainer {
+    position: relative;
+    background: url('../img/effect/gacha_bg_blur.png') 0 0 no-repeat;
+    background-size: 100%;
+    width: 776px; height: 428px;
+    border: 2px solid #f0f0f0; }
+#scenecontainer .scene { display: none; }
+#skip { z-index: 9999; opacity: 0.7; position: absolute; top: 10px; right: 10px; }
+#sceneresult { position: relative; }
+#sceneresult .resultbg { width: 200px; height: 400px; position: absolute; }
+#sceneresult .resultbg.r_left { top: 15px; left: 130px; }
+#sceneresult .resultbg.r_right { top: 15px; right: 130px; }
+#sceneresult .resultbg.lv1 { background:url('../img/effect/lv1.png') 0 0 no-repeat; background-size: 100%; }
+#sceneresult .resultbg.lv2 { background:url('../img/effect/lv2.png') 0 0 no-repeat; background-size: 100%; }
+#sceneresult .resultbg.lv3 { background:url('../img/effect/lv3.png') 0 0 no-repeat; background-size: 100%; }
+
+#sceneresult .pic { /*background: #fff;*/ position:absolute; top: 130px; left: 40px; width : 120px; height: 120px; }
+#sceneresult .pic img { border-radius:10px; }
+#sceneresult .name { position:absolute; top:298px; left: 40px; width: 120px; text-align:center;
+    font-size: 12pt; font-weight: bold; letter-spacing: -1px; text-shadow: 0 0 5px #000; }
+#sceneresult .rare { position:absolute; top:360px; left: 40px; width: 120px; text-align:center;
+    color: rgb(255, 255, 0); text-shadow: 0 0 5px rgba(0,0,0,0.5); }
+
+#items .item { width: 80px; height: 80px; border-radius:5px; /*background: #fff;*/ float:left; margin: 0 20px 20px; }
+#items .item img { border-radius:5px; width: 100%; }
+
+.btn {
+    border: none;
+    background: #dfe2e7;
+    color: #333;
+    border-radius: 2px;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.btn:hover { background: #fff; }
+.btn-special { background-color:rgb(255, 230, 200); }
+.btn-special:hover { background-color:#fff; }
