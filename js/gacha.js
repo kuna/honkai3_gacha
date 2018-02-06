@@ -160,8 +160,8 @@ var Gacha = function(dist, pickup_ids) {
         pickup_table[ obj.type ][ obj.rare-1 ].push(obj);
     }
     pickup_table['pickups'] = pickup_ids;
-    console.log(range_table);
-    console.log(pickup_table);
+    //console.log(range_table);
+    //console.log(pickup_table);
 
     var gacha = new function() {
         this._gacha = function (rnd_val) {
@@ -182,8 +182,15 @@ var Gacha = function(dist, pickup_ids) {
                             console.error('indicated table is empty: '+types[i]+','+j);
                             break;
                         }
+                        // if valkyrie & rank >= 4,
+                        // clear count.
+                        if (types[i] == 'valkyrie' && j >= 4)
+                        {
+                            count = 0;
+                        }
                         // if then, select in that category!
                         var _rnd = Math.random();
+                        console.log(lst);
                         var _idx = Math.floor(lst.length * _rnd);
                         return lst[_idx];
                     }
@@ -202,17 +209,18 @@ var Gacha = function(dist, pickup_ids) {
             while (true)
             {
                 var g = this._gacha();
-                if (g.rare >= 5)
+                if (g.rare >= 4 && g.type != 'valkyrie_piece')
                     return g;
             }
         }
 
         this.gacha = function() {
             var r = this._gacha();
-            if (count > 0 && count % 10 == 0) {
-                r = this.ensure_gacha();
-            }
             count++;
+            if (count % 10 == 0) {
+                r = this.ensure_gacha();
+                count = 0;
+            }
             return r;
         }
         
