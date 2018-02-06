@@ -53,7 +53,7 @@ body { margin: 0; padding: 0; background: url('../img/bg.jpg') center top no-rep
 #items .item.itemtype-valkyrie.itemrare5,
 #items .item.itemtype-stigmata.itemrare5,
 #items .item.itemtype-weapon.itemrare5
-{ border: rgba(220, 55, 200, 0.8) 2px solid; margin: 0 16px 16px; }
+{ border: rgba(220, 55, 200, 0.8) 2px solid; background-color: rgba(220, 55, 200, 0.5); margin: 0 16px 16px; }
 #items .item .desc { 
     position: absolute; display: none; top: -20px; left: 0; z-index: 99;
     padding: 5px 2px; color: #fff; background-color: rgba(0,0,0,0.8);
