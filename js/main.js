@@ -1,6 +1,6 @@
 // default settings
 var gacha_dist = gacha_dist_normal;
-var pickup_extended = 
+var pickup_weapon = 
 [
     get_object_idx('요정의 활 오리진'), 
     get_object_idx('아인슈타인 밴드 (상)'),
@@ -26,7 +26,7 @@ var pickup_extended =
     get_object_idx('슈뢰딩거 (중)'),
     get_object_idx('슈뢰딩거 (하)'),
 ];
-var pickup_special = 
+var pickup_extended = 
 [
     get_object_idx('처형복 반혼초'), 
     get_object_idx('처형복 반혼초 조각'),
@@ -259,10 +259,10 @@ $(function() {
         }
     });
     // set default gacha index
+    $('#weapon-form .gacha_list').each(function (i,obj) {
+        $(this).val( pickup_weapon[i] );
+    });
     $('#extended-form .gacha_list').each(function (i,obj) {
         $(this).val( pickup_extended[i] );
-    });
-    $('#special-form .gacha_list').each(function (i,obj) {
-        $(this).val( pickup_special[i] );
     });
 });
