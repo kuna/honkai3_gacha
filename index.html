@@ -102,13 +102,13 @@
             <p>현재 픽업: <span id='pickup-name'>표준 뽑기</span></p>
             <div class="accordion">
                 <h3>표준 뽑기</h3>
-                <div>
+                <div style='height:400px;'>
                     <p>STANDARD GACHA</p>
                     <p><img src='img/gacha_standard.png' width=100%></p>
-                    <button class="dialog_save" data-type='normal' data-form='normal-form' data-pickup-name='표준 뽑기'>선택</button>
+                    <button class="btn btn-submit dialog_save" data-type='normal' data-form='normal-form' data-pickup-name='표준 뽑기'>선택</button>
                 </div>
                 <h3>확장 뽑기</h3>
-                <div>
+                <div style='height:700px;'>
                     <p><img src='img/gacha_extended.jpg' width=100%></p>
                     <div id='extended-form'>
                         <h4>픽업 목록</h4>
@@ -137,10 +137,10 @@
                         <select class='gacha_list'></select>
                         <select class='gacha_list'></select>
                     </div>
-                    <button class="dialog_save" data-type='weapon' data-form='extended-form' data-pickup-name='확장 뽑기'>선택</button>
+                    <button class="btn btn-submit dialog_save" data-type='weapon' data-form='extended-form' data-pickup-name='확장 뽑기'>선택</button>
                 </div>
                 <h3>특별 뽑기</h3>
-                <div>
+                <div style='height:600px;'>
                     <p><img src='img/gacha_special.jpg' width=100%></p>
                     <div id='special-form'>
                         <h4>S 발키리</h4>
@@ -156,7 +156,7 @@
                         <select class='gacha_list'></select>
                         <select class='gacha_list'></select>
                     </div>
-                    <button class="dialog_save" data-type='special' data-form='special-form' data-pickup-name='특별 뽑기'>선택</button>
+                    <button class="btn btn-submit dialog_save" data-type='special' data-form='special-form' data-pickup-name='특별 뽑기'>선택</button>
                 </div>
             </div>
             <label><input type="checkbox" id="allblue">JAP server probability (올블루 허용)</label>

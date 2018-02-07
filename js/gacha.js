@@ -5,8 +5,8 @@ var ids = [
     {'type':'valkyrie', 'name':'성녀의 기도', 'rare':4, 'img':'valkyrie/kiana_c3.png'},
     {'type':'valkyrie', 'name':'백기사 월광', 'rare':5, 'img':'valkyrie/kiana_c4.png'},
     
-    {'type':'valkyrie', 'name':'펄스 슈트 비홍', 'rare':3, 'img':'valkyrie/mei_c1.png'},
-    {'type':'valkyrie', 'name':'발키리 스트라이크', 'rare':4, 'img':'valkyrie/mei_c2.png'},
+    {'type':'valkyrie', 'name':'펄스 슈트 비홍', 'rare':3, 'img':'valkyrie/mei_c2.png'},
+    {'type':'valkyrie', 'name':'발키리 스트라이크', 'rare':4, 'img':'valkyrie/mei_c1.png'},
     {'type':'valkyrie', 'name':'그림자의 춤', 'rare':4, 'img':'valkyrie/mei_c3.png'},
     {'type':'valkyrie', 'name':'뇌전 여왕의 귀신 갑주', 'rare':5, 'img':'valkyrie/mei_c4.png'},
     
@@ -66,7 +66,7 @@ var ids = [
     {'type':'weapon', 'name':'개량형 USP', 'rare':2, 'img':'weapon/2.png'},
     {'type':'weapon', 'name':'M1911', 'rare':2, 'img':'weapon/3.png'},
     {'type':'weapon', 'name':'데저트 이글', 'rare':3, 'img':'weapon/4.png'},
-    {'type':'weapon', 'name':'콜트 피스 메이커', 'rare':3, 'img':'weapon/5.png'},
+    //{'type':'weapon', 'name':'콜트 피스 메이커', 'rare':3, 'img':'weapon/5.png'},
     {'type':'weapon', 'name':'개량형 콜트 아나콘다', 'rare':3, 'img':'weapon/6.png'},
     {'type':'weapon', 'name':'호리카와 쿠니히로', 'rare':3, 'img':'weapon/katana_21.png'},
     {'type':'weapon', 'name':'요도 아메무라', 'rare':3, 'img':'weapon/katana_22.png'},
@@ -234,9 +234,9 @@ var ids = [
     {'type':'stigmata', 'name':'플랑크 (상)', 'rare':5, 'img':'stigmata/MaxPlanck-1_thumb.png'},
     {'type':'stigmata', 'name':'플랑크 (중)', 'rare':5, 'img':'stigmata/MaxPlanck-2_thumb.png'},
     {'type':'stigmata', 'name':'플랑크 (하)', 'rare':5, 'img':'stigmata/MaxPlanck-3_thumb.png'},
-    {'type':'stigmata', 'name':'이이 홍 (상)', 'rare':5, 'img':'stigmata/LiEr-4_thumb.png.png'},
-    {'type':'stigmata', 'name':'이이 홍 (중)', 'rare':5, 'img':'stigmata/LiEr-5_thumb.png.png'},
-    {'type':'stigmata', 'name':'이이 홍 (하)', 'rare':5, 'img':'stigmata/LiEr-6_thumb.png.png'},
+    {'type':'stigmata', 'name':'이이 홍 (상)', 'rare':5, 'img':'stigmata/LiEr-4_thumb.png'},
+    {'type':'stigmata', 'name':'이이 홍 (중)', 'rare':5, 'img':'stigmata/LiEr-5_thumb.png'},
+    {'type':'stigmata', 'name':'이이 홍 (하)', 'rare':5, 'img':'stigmata/LiEr-6_thumb.png'},
     {'type':'stigmata', 'name':'카렌 서약 (상)', 'rare':5, 'img':'stigmata/Karen-1_thumb.png'},
     {'type':'stigmata', 'name':'카렌 서약 (중)', 'rare':5, 'img':'stigmata/Karen-2_thumb.png'},
     {'type':'stigmata', 'name':'카렌 서약 (하)', 'rare':5, 'img':'stigmata/Karen-3_thumb.png'},
@@ -286,9 +286,9 @@ var ids = [
 
 
 var gacha_dist_normal = {
-    's_valkyrie' : 1.50,
+    's_valkyrie' : 0.9, // 1.5 --> 0.94
     's_valkyrie_piece': 1.47,
-    'a_valkyrie': 14.50,
+    'a_valkyrie': 8.4,  // 13.5 --> 8.46
     'a_valkyrie_piece': 10.40,
     'b_valkyrie': 5.5,
     's_weapon': 0.46,
@@ -319,9 +319,9 @@ var gacha_dist_valkyrie = {
     // S, S_piece, 
     // A, A_piece
     'pickups': [
-        1.5, 2.5,
-        4.5, 7.5,
-        3.0, 3.0, 3.0, 3.0, 3.0, 3.0,
+        0.9, 3.0,   // 1.5 --> 0.94
+        2.8, 8.5,   // 4.5 --> 2.82
+        1.88, 4.0, 1.88, 4.0, 1.88, 4.0,   // 3 --> 1.88
     ],
     'material': 66,
     'special': false,
@@ -345,9 +345,9 @@ var gacha_dist_weapon = {
     // weapon_others,
     // stigmata_others
     'pickups': [
-        2.48, 1.24, 1.24, 1.24,
-        0.413,0.413,0.413,0.413,0.413,0.413,
-        0.31,0.31,0.31,0.31,0.31,0.31,0.31,0.31,0.31,0.31,0.31,0.31,
+        0.97, 0.485, 0.485, 0.485,
+        0.16,0.16,0.16,0.16,0.16,0.16,
+        0.121,0.121,0.121,0.121,0.121,0.121,0.121,0.121,0.121,0.121,0.121,0.121,
     ],
     'material': 0,
     'special': false,

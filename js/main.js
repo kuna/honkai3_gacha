@@ -250,7 +250,7 @@ $(function() {
         console.log(pickups);
         gacha = Gacha(gacha_dist, pickups);
     });
-    $( ".accordion" ).accordion();
+    $( ".accordion" ).accordion({ heightStyle: "content" });
     $('#settingdialog').hide();
     $( '.gacha_list' ).each(function() {
         for (var i=0; i<ids.length; i++)

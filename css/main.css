@@ -72,4 +72,5 @@ body { margin: 0; padding: 0; background: url('../img/bg.jpg') center top no-rep
 .btn:hover { background: #fff; }
 .btn-special { background-color:rgb(255, 230, 200); }
 .btn-special:hover { background-color:#fff; }
+.btn-submit { width:100%; margin-top:30px; }
 .hide { display:none; }
