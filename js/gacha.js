@@ -433,12 +433,12 @@ function get_gacha_dist(type, all_blue)
 {
     var server_normal = {
         'normal': gacha_dist_normal,
-        'special': gacha_dist_valkyrie,
+        'extended': gacha_dist_valkyrie,
         'weapon': gacha_dist_weapon
     };
     var server_jap = {
         'normal': gacha_jap_dist_normal,
-        'special': gacha_jap_dist_valkyrie,
+        'extended': gacha_jap_dist_valkyrie,
         'weapon': gacha_jap_dist_weapon
     };
     if (all_blue)
