@@ -299,14 +299,16 @@ var gacha_dist_normal = {
     'b_stigmata': 44.40,
     'pickups': [],
     'material': 0,
-    'special': false
+    'special': false,
+    'ensure_type': 'valkyrie',
+    'ensure_level': 4,
 };
 
 var gacha_dist_valkyrie = {
-    's_valkyrie' : 1.50 - 1.5,
-    's_valkyrie_piece': 4.50 - 4.5,
-    'a_valkyrie': 14.50 - 4.5,
-    'a_valkyrie_piece': 16.50 - 7.5,
+    's_valkyrie' : 0,
+    's_valkyrie_piece': 0,
+    'a_valkyrie': 0,
+    'a_valkyrie_piece': 0,
     'b_valkyrie': 0,
     's_weapon': 0,
     's_stigmata': 0,
@@ -314,10 +316,17 @@ var gacha_dist_valkyrie = {
     'a_stigmata': 0,
     'b_weapon': 0,
     'b_stigmata': 0,
-    // S, A, S_piece, A_piece
-    'pickups': [1.5, 4.5, 4.5, 7.5],
+    // S, S_piece, 
+    // A, A_piece
+    'pickups': [
+        1.5, 2.5,
+        4.5, 7.5,
+        3.0, 3.0, 3.0, 3.0, 3.0, 3.0,
+    ],
     'material': 66,
-    'special': false
+    'special': false,
+    'ensure_type': 'valkyrie',
+    'ensure_level': 4,
 };
 
 var gacha_dist_weapon = {
@@ -326,26 +335,158 @@ var gacha_dist_weapon = {
     'a_valkyrie': 0,
     'a_valkyrie_piece': 0,
     'b_valkyrie': 0,
-    's_weapon': 4.96 - 4.48,
-    's_stigmata': 7.44 - 1.44*4,
+    's_weapon': 0,
+    's_stigmata': 0,
     'a_weapon': 15.475,
     'a_stigmata': 44.914,
     'b_weapon': 48.449,
     'b_stigmata': 41.179,
     // weapon, stigmata
-    'pickups': [4.48, 1.44, 1.44, 1.44],
+    // weapon_others,
+    // stigmata_others
+    'pickups': [
+        2.48, 1.24, 1.24, 1.24,
+        0.413,0.413,0.413,0.413,0.413,0.413,
+        0.31,0.31,0.31,0.31,0.31,0.31,0.31,0.31,0.31,0.31,0.31,0.31,
+    ],
     'material': 0,
-    'special': false
+    'special': false,
+    'ensure_type': "pickups",
+    'ensure_level': 5,
 };
 
-var Gacha = function(dist, pickup_ids) {
+var gacha_jap_dist_normal = {
+    's_valkyrie' : 1.50,
+    's_valkyrie_piece': 1.47,
+    'a_valkyrie': 14.50,
+    'a_valkyrie_piece': 10.40,
+    'b_valkyrie': 5.5,
+    's_weapon': 0.46,
+    's_stigmata': 0.74,
+    'a_weapon': 7.50,
+    'a_stigmata': 44.50,
+    'b_weapon': 14.44,
+    'b_stigmata': 44.40,
+    'pickups': [],
+    'material': 0,
+    'special': false,
+    'ensure_type': null,
+    'ensure_level': 4,
+};
+
+var gacha_jap_dist_valkyrie = {
+    's_valkyrie' : 0,
+    's_valkyrie_piece': 0,
+    'a_valkyrie': 0,
+    'a_valkyrie_piece': 0,
+    'b_valkyrie': 0,
+    's_weapon': 0,
+    's_stigmata': 0,
+    'a_weapon': 0,
+    'a_stigmata': 0,
+    'b_weapon': 0,
+    'b_stigmata': 0,
+    // S, S_piece, 
+    // A, A_piece
+    'pickups': [
+        1.5, 2.5,
+        4.5, 7.5,
+        3.0, 3.0, 3.0, 3.0, 3.0, 3.0,
+    ],
+    'material': 66,
+    'special': false,
+    'ensure_type': null,
+    'ensure_level': 4,
+};
+
+var gacha_jap_dist_weapon = {
+    's_valkyrie' : 0,
+    's_valkyrie_piece': 0,
+    'a_valkyrie': 0,
+    'a_valkyrie_piece': 0,
+    'b_valkyrie': 0,
+    's_weapon': 0,
+    's_stigmata': 0,
+    'a_weapon': 15.475,
+    'a_stigmata': 44.914,
+    'b_weapon': 48.449,
+    'b_stigmata': 41.179,
+    // weapon, stigmata
+    // weapon_others,
+    // stigmata_others
+    'pickups': [
+        2.48, 1.24, 1.24, 1.24,
+        0.413,0.413,0.413,0.413,0.413,0.413,
+        0.31,0.31,0.31,0.31,0.31,0.31,0.31,0.31,0.31,0.31,0.31,0.31,
+    ],
+    'material': 0,
+    'special': false,
+    'ensure_type': "pickups",
+    'ensure_level': 5,
+};
+
+/*
+ * utility function
+ */
+
+function get_gacha_dist(type, all_blue)
+{
+    var server_normal = {
+        'normal': gacha_dist_normal,
+        'special': gacha_dist_valkyrie,
+        'weapon': gacha_dist_weapon
+    };
+    var server_jap = {
+        'normal': gacha_jap_dist_normal,
+        'special': gacha_jap_dist_valkyrie,
+        'weapon': gacha_jap_dist_weapon
+    };
+    if (all_blue)
+    {
+        return server_jap[type];
+    } else {
+        return server_normal[type];
+    }
+}
+
+function get_object_idx(name)
+{
+    for (var i=0; i<ids.length; i++)
+    {
+        if (ids[i].name == name)
+            return i;
+    }
+    console.error('cannot find name: ' + name);
+    return -1;
+}
+
+
+
+
+/*
+ * main class Gacha
+ */
+
+var Gacha = function(dist, pickup_ids)
+{
     /*
      * pickup object is excluded from general gacha!
      * (calculated with exclusive probability)
      */
 
+    // ASSERT
+    if (dist.pickups.length != pickup_ids.length)
+    {
+        console.error('pickup length mismatch!!');
+        return;
+    }
+
     // ensure 4-STAR gacha per 10 count
     var count = 0;
+    // is previously choosed one pick-up?
+    var is_pickup = false;
+    var ensure_type = null;
+    var ensure_level = 4;
 
     // generate pickup table, according to given distribution
     var range_table = {
@@ -353,7 +494,7 @@ var Gacha = function(dist, pickup_ids) {
         'valkyrie_piece': [0,0,0,0,0],
         'weapon': [0,0,0,0,0],
         'stigmata': [0,0,0,0,0],
-        'pickups': [],
+        'pickups': [ ],
     };
     var pickup_table = {
         'valkyrie': [ [],[],[],[],[] ],
@@ -361,14 +502,16 @@ var Gacha = function(dist, pickup_ids) {
         'weapon': [ [],[],[],[],[] ],
         'stigmata': [ [],[],[],[],[] ],
         'material': [],
-        'pickups': [],
+        'pickups': [ ],
     };
     // generate: category range.
     var prob_accumlated = 0;
     var prob_sum = 0;
     var prob_recalc = {};
+    ensure_type = dist['ensure_type'];
+    ensure_level = dist['ensure_level'];
     for (var i in dist) {
-        if (i == 'special') continue;
+        if (i == 'special' || i == 'ensure_type'|| i == 'ensure_level') continue;
         if (i == 'pickups') {
             for (var j=0; j<dist['pickups'].length; j++)
                 prob_sum += dist['pickups'][j];
@@ -377,7 +520,7 @@ var Gacha = function(dist, pickup_ids) {
         prob_sum += dist[i];
     }
     for (var i in dist) {
-        if (i == 'special') continue;
+        if (i == 'special' || i == 'ensure_type'|| i == 'ensure_level') continue;
         if (i == 'pickups') {
             prob_recalc['pickups'] = [];
             for (var j=0; j<dist['pickups'].length; j++)
@@ -431,7 +574,10 @@ var Gacha = function(dist, pickup_ids) {
         }
         pickup_table[ obj.type ][ obj.rare-1 ].push(obj);
     }
-    pickup_table['pickups'] = pickup_ids;
+    for (var i=0; i<pickup_ids.length; i++)
+    {
+        pickup_table['pickups'].push( [ ids[ pickup_ids[i] ] ] );
+    }
     console.log(range_table);
     console.log(pickup_table);
 
@@ -446,7 +592,7 @@ var Gacha = function(dist, pickup_ids) {
                     // is category in range?
                     if (_rnd <= t[j])
                     {
-                        lst = pickup_table[types[i]][j];
+                        var lst = pickup_table[types[i]][j];
                         // prevent bug: if indicated table is empty,
                         // then exit loop
                         if (lst.length == 0)
@@ -454,16 +600,21 @@ var Gacha = function(dist, pickup_ids) {
                             console.error('indicated table is empty: '+types[i]+','+j);
                             break;
                         }
-                        // if valkyrie & rank >= 4,
-                        // clear count.
-                        if (types[i] == 'valkyrie' && j >= 4)
-                        {
-                            count = 0;
-                        }
                         // if then, select in that category!
                         var _rnd = Math.random();
                         var _idx = Math.floor(lst.length * _rnd);
-                        return lst[_idx];
+                        var obj = lst[_idx];
+                        // if valkyrie & rank >= 4,
+                        // clear count.
+                        if ((types[i] == ensure_type || obj.type == ensure_type) && obj.rare >= ensure_level)
+                        {
+                            console.log('가챠 스택 초기화');
+                            count = 0;
+                            is_pickup = true;
+                        } else {
+                            is_pickup = false;
+                        }
+                        return obj;
                     }
                 }
             }
@@ -480,19 +631,19 @@ var Gacha = function(dist, pickup_ids) {
             while (true)
             {
                 var g = this._gacha();
-                if (g.rare >= 4 && g.type != 'valkyrie_piece')
+                if (is_pickup)
                     return g;
             }
         }
 
         this.gacha = function() {
-            var r = this._gacha();
-            count++;
-            if (count % 10 == 0) {
-                r = this.ensure_gacha();
+            count ++;
+            if (count % 10 == 0 && ensure_type != null) {
                 count = 0;
+                console.log('확정 가챠 수행');
+                return this.ensure_gacha();
             }
-            return r;
+            return this._gacha();
         }
         
         this.gacha_material = function() {

@@ -2,6 +2,7 @@
     <head>
         <title>Honkai 3rd Gacha Simulator</title>
         <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/jquery-ui.css">
     </head>
     <body>
         <div id="container">
@@ -97,7 +98,73 @@
         </div>
 
 
+        <div id="settingdialog" title="Select Pickup Type">
+            <p>현재 픽업: <span id='pickup-name'>표준 뽑기</span></p>
+            <div class="accordion">
+                <h3>표준 뽑기</h3>
+                <div>
+                    <p>STANDARD GACHA</p>
+                    <p><img src='img/gacha_standard.png' width=100%></p>
+                    <button class="dialog_save" data-type='normal' data-form='normal-form' data-pickup-name='표준 뽑기'>선택</button>
+                </div>
+                <h3>확장 뽑기</h3>
+                <div>
+                    <p><img src='img/gacha_extended.jpg' width=100%></p>
+                    <div id='extended-form'>
+                        <h4>픽업 목록</h4>
+                        <select class='gacha_list'></select>
+                        <select class='gacha_list'></select>
+                        <select class='gacha_list'></select>
+                        <select class='gacha_list'></select>
+                        <h4>탈로테 목록</h4>
+                        <select class='gacha_list'></select>
+                        <select class='gacha_list'></select>
+                        <select class='gacha_list'></select>
+                        <select class='gacha_list'></select>
+                        <select class='gacha_list'></select>
+                        <select class='gacha_list'></select>
+
+                        <select class='gacha_list'></select>
+                        <select class='gacha_list'></select>
+                        <select class='gacha_list'></select>
+                        <select class='gacha_list'></select>
+                        <select class='gacha_list'></select>
+                        <select class='gacha_list'></select>
+                        <select class='gacha_list'></select>
+                        <select class='gacha_list'></select>
+                        <select class='gacha_list'></select>
+                        <select class='gacha_list'></select>
+                        <select class='gacha_list'></select>
+                        <select class='gacha_list'></select>
+                    </div>
+                    <button class="dialog_save" data-type='weapon' data-form='extended-form' data-pickup-name='확장 뽑기'>선택</button>
+                </div>
+                <h3>특별 뽑기</h3>
+                <div>
+                    <p><img src='img/gacha_special.jpg' width=100%></p>
+                    <div id='special-form'>
+                        <h4>S 발키리</h4>
+                        <select class='gacha_list'></select>
+                        <select class='gacha_list'></select>
+                        <h4>A 발키리</h4>
+                        <select class='gacha_list'></select>
+                        <select class='gacha_list'></select>
+                        <select class='gacha_list'></select>
+                        <select class='gacha_list'></select>
+                        <select class='gacha_list'></select>
+                        <select class='gacha_list'></select>
+                        <select class='gacha_list'></select>
+                        <select class='gacha_list'></select>
+                    </div>
+                    <button class="dialog_save" data-type='special' data-form='special-form' data-pickup-name='확장 뽑기'>선택</button>
+                </div>
+            </div>
+            <label><input type="checkbox" id="allblue">JAP server probability (올블루 허용)</label>
+        </div>
+
+
         <script src="js/jquery.min.js"></script>
+        <script src="js/jquery-ui.min.js"></script>
         <script src="js/gacha.js"></script>
         <script src="js/main.js"></script>
     </body>
