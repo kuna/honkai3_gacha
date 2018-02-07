@@ -45,8 +45,20 @@ body { margin: 0; padding: 0; background: url('../img/bg.jpg') center top no-rep
 #sceneresult .rare { position:absolute; top:360px; left: 40px; width: 120px; text-align:center;
     color: rgb(255, 255, 0); text-shadow: 0 0 5px rgba(0,0,0,0.5); }
 
-#items .item { width: 80px; height: 80px; border-radius:5px; /*background: #fff;*/ float:left; margin: 0 20px 20px; }
+#items .item { position: relative; overflow: visible;
+    width: 80px; height: 80px; border-radius:5px; /*background: #fff;*/
+    float:left; margin: 0 20px 20px; border-radius: 5px;
+}
 #items .item img { border-radius:5px; width: 100%; }
+#items .item.itemtype-valkyrie.itemrare5,
+#items .item.itemtype-stigmata.itemrare5,
+#items .item.itemtype-weapon.itemrare5
+{ border: rgba(220, 55, 200, 0.8) 2px solid; background-color: rgba(220, 55, 200, 0.5); margin: 0 16px 16px; }
+#items .item .desc { 
+    position: absolute; display: none; top: -20px; left: 0; z-index: 99;
+    padding: 5px 2px; color: #fff; background-color: rgba(0,0,0,0.8);
+}
+#items .item:hover .desc { display: block; }
 
 .btn {
     border: none;
@@ -60,3 +72,4 @@ body { margin: 0; padding: 0; background: url('../img/bg.jpg') center top no-rep
 .btn:hover { background: #fff; }
 .btn-special { background-color:rgb(255, 230, 200); }
 .btn-special:hover { background-color:#fff; }
+.hide { display:none; }
