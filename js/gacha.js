@@ -337,10 +337,10 @@ var gacha_dist_weapon = {
     'b_valkyrie': 0,
     's_weapon': 0,
     's_stigmata': 0,
-    'a_weapon': 15.475,
-    'a_stigmata': 44.914,
-    'b_weapon': 48.449,
-    'b_stigmata': 41.179,
+    'a_weapon': 15.275,
+    'a_stigmata': 22.912,
+    'b_weapon': 28.239,
+    'b_stigmata': 21.179,
     // weapon, stigmata
     // weapon_others,
     // stigmata_others
@@ -407,10 +407,10 @@ var gacha_jap_dist_weapon = {
     'b_valkyrie': 0,
     's_weapon': 0,
     's_stigmata': 0,
-    'a_weapon': 15.475,
-    'a_stigmata': 44.914,
-    'b_weapon': 48.449,
-    'b_stigmata': 41.179,
+    'a_weapon': 15.275,
+    'a_stigmata': 22.912,
+    'b_weapon': 28.239,
+    'b_stigmata': 21.179,
     // weapon, stigmata
     // weapon_others,
     // stigmata_others
