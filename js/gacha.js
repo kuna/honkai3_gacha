@@ -286,9 +286,9 @@ var ids = [
 
 
 var gacha_dist_normal = {
-    's_valkyrie' : 0.9, // 1.5 --> 0.94
+    's_valkyrie' : 0.94, // 1.5 --> 0.94
     's_valkyrie_piece': 1.27,
-    'a_valkyrie': 8.4,  // 13.5 --> 8.46
+    'a_valkyrie': 8.46,  // 13.5 --> 8.46
     'a_valkyrie_piece': 10.20,
     'b_valkyrie': 5.5,
     's_weapon': 0.46,
@@ -319,8 +319,8 @@ var gacha_dist_valkyrie = {
     // S, S_piece, 
     // A, A_piece
     'pickups': [
-        0.9, 3.0,   // 1.5 --> 0.94
-        2.8, 8.5,   // 4.5 --> 2.82
+        0.94, 3.0,   // 1.5 --> 0.94
+        2.82, 8.5,   // 4.5 --> 2.82
         1.88, 4.0, 1.88, 4.0, 1.88, 4.0,   // 3 --> 1.88
     ],
     'material': 66,
@@ -337,10 +337,10 @@ var gacha_dist_weapon = {
     'b_valkyrie': 0,
     's_weapon': 0,
     's_stigmata': 0,
-    'a_weapon': 15.275,
-    'a_stigmata': 22.912,
-    'b_weapon': 28.239,
-    'b_stigmata': 21.179,
+    'a_weapon': 16.275,
+    'a_stigmata': 23.912,
+    'b_weapon': 29.239,
+    'b_stigmata': 22.179,
     // weapon, stigmata
     // weapon_others,
     // stigmata_others
