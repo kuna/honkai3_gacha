@@ -421,7 +421,7 @@ var gacha_jap_dist_weapon = {
     ],
     'material': 0,
     'special': false,
-    'ensure_type': "pickups",
+    'ensure_type': null,
     'ensure_level': 5,
 };
 
