@@ -101,6 +101,7 @@ var ids = [
     {'type':'weapon', 'name':'열에너지 절단검', 'rare':4, 'img':'weapon/katana_37.png'},
     {'type':'weapon', 'name':'단앵', 'rare':4, 'img':'weapon/katana_38.png'},
     {'type':'weapon', 'name':'뇌폭', 'rare':4, 'img':'weapon/katana_39.png'},
+    {'type':'weapon', 'name':'반역장 태도 11식', 'rare':4, 'img':'weapon/katana_311.png'},
     {'type':'weapon', 'name':'마르코프 A형', 'rare':4, 'img':'weapon/cannon_31.png'},
     {'type':'weapon', 'name':'마르코프 C형', 'rare':4, 'img':'weapon/cannon_32.png'},
     {'type':'weapon', 'name':'음극자포 07식', 'rare':4, 'img':'weapon/cannon_33.png'},
@@ -134,6 +135,7 @@ var ids = [
     {'type':'weapon', 'name':'방영도 빙담천', 'rare':5, 'img':'weapon/60.png'},
     {'type':'weapon', 'name':'요정검 실반', 'rare':5, 'img':'weapon/katana_sylvan.png'},
     {'type':'weapon', 'name':'5th 성유물', 'rare':5, 'img':'weapon/cannon_41.png'},
+    {'type':'weapon', 'name':'헤카톤케일 프로토타입', 'rare':5, 'img':'weapon/cannon_42.png'},
     {'type':'weapon', 'name':'사이클롭스 프로토타입', 'rare':5, 'img':'weapon/cannon_43.png'},
     {'type':'weapon', 'name':'중장 토끼 19C', 'rare':5, 'img':'weapon/cannon_44.png'},
     {'type':'weapon', 'name':'코어 집속포 Delta', 'rare':5, 'img':'weapon/cannon_45.png'},
@@ -325,7 +327,7 @@ var gacha_dist_valkyrie = {
     // A, A_piece
     'pickups': [
         0.94, 3.0,   // 1.5 --> 0.94
-        2.82, 8.5,   // 4.5 --> 2.82
+        1.41, 4.2, 1.41, 4.2,   // 4.5 --> 2.82
         1.88, 4.0, 1.88, 4.0, 1.88, 4.0,   // 3 --> 1.88
     ],
     'material': 66,
@@ -395,7 +397,7 @@ var gacha_jap_dist_valkyrie = {
     // A, A_piece
     'pickups': [
         1.5, 2.5,
-        4.5, 7.5,
+        2.25,3.75,2.25,3.75,//4.5, 7.5,
         3.0, 3.0, 3.0, 3.0, 3.0, 3.0,
     ],
     'material': 66,
