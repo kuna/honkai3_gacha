@@ -151,6 +151,8 @@ var ids = [
     {'type':'weapon', 'name':'우귀절 나가미츠', 'rare':5, 'img':'weapon/claymore_48.png'},
     {'type':'weapon', 'name':'발뭉', 'rare':5, 'img':'weapon/claymore_4x.png'},
     {'type':'weapon', 'name':'유다의 서약', 'rare':5, 'img':'weapon/cross_41.png'},
+    {'type':'weapon', 'name':'모조된 유다 피의 포옹', 'rare':5, 'img':'weapon/cross_42.png'},
+    
 
 
 
@@ -264,6 +266,9 @@ var ids = [
     {'type':'stigmata', 'name':'비옥환 (상)', 'rare':5, 'img':'stigmata/biokhwan-01.png'},
     {'type':'stigmata', 'name':'비옥환 (중)', 'rare':5, 'img':'stigmata/biokhwan-02.png'},
     {'type':'stigmata', 'name':'비옥환 (하)', 'rare':5, 'img':'stigmata/biokhwan-03.png'},
+    {'type':'stigmata', 'name':'드라큘라 (상)', 'rare':5, 'img':'stigmata/Dracula-1_thumb.png'},
+    {'type':'stigmata', 'name':'드라큘라 (중)', 'rare':5, 'img':'stigmata/Dracula-2_thumb.png'},
+    {'type':'stigmata', 'name':'드라큘라 (하)', 'rare':5, 'img':'stigmata/Dracula-3_thumb.png'},
 
 
 
