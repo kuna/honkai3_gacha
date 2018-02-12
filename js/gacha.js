@@ -26,6 +26,12 @@ var ids = [
     
     {'type':'valkyrie', 'name':'발키리 서약', 'rare':4, 'img':'valkyrie/theresa_c1_icon.png'},
     {'type':'valkyrie', 'name':'처형복 반혼초', 'rare':5, 'img':'valkyrie/theresa_c2_icon.png'},
+    {'type':'valkyrie', 'name':'앵화윤무', 'rare':4, 'img':'valkyrie/theresa_c3_icon.png'},
+    {'type':'valkyrie', 'name':'신은송가', 'rare':5, 'img':'valkyrie/theresa_c4_icon.png'},
+
+    {'type':'valkyrie', 'name':'은랑의 여명', 'rare':4, 'img':'valkyrie/bronya-silver-wolf.png', special:true},
+    {'type':'valkyrie', 'name':'이능 흑핵 침식', 'rare':5, 'img':'valkyrie/bronya_xenos_icon.png', special:true},
+    {'type':'valkyrie', 'name':'후카', 'rare':5, 'img':'valkyrie/fuka_icon.png'},
 
 
 
@@ -55,6 +61,12 @@ var ids = [
     
     {'type':'valkyrie_piece', 'name':'발키리 서약 조각', 'rare':4, 'img':'valkyrie/piece.png'},
     {'type':'valkyrie_piece', 'name':'처형복 반혼초 조각', 'rare':5, 'img':'valkyrie/piece.png'},
+    {'type':'valkyrie_piece', 'name':'앵화윤무 조각', 'rare':4, 'img':'valkyrie/piece.png'},
+    {'type':'valkyrie_piece', 'name':'신은송가 조각', 'rare':5, 'img':'valkyrie/piece.png'},
+
+    {'type':'valkyrie_piece', 'name':'은랑의 여명 조각', 'rare':4, 'img':'valkyrie/piece.png', special:true},
+    {'type':'valkyrie_piece', 'name':'이능 흑핵 침식 조각', 'rare':5, 'img':'valkyrie/piece.png', special:true},
+    {'type':'valkyrie_piece', 'name':'후카 조각', 'rare':5, 'img':'valkyrie/piece.png'},
 
     
     // weapons
@@ -129,6 +141,7 @@ var ids = [
     {'type':'weapon', 'name':'3rd 성유물', 'rare':5, 'img':'weapon/57.png'},
     {'type':'weapon', 'name':'뇌절', 'rare':5, 'img':'weapon/58.png'},
     {'type':'weapon', 'name':'마그네틱 스톰 참', 'rare':5, 'img':'weapon/59.png'},
+    {'type':'weapon', 'name':'영도 사쿠라 후부키', 'rare':5, 'img':'weapon/katana_315.png'},
     {'type':'weapon', 'name':'허무의 칼날', 'rare':5, 'img':'weapon/62.png'},
     {'type':'weapon', 'name':'고주파 절단도', 'rare':5, 'img':'weapon/65.png'},
     {'type':'weapon', 'name':'와호장룡', 'rare':5, 'img':'weapon/katana_waho.png'},
