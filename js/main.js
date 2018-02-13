@@ -269,6 +269,10 @@ $(function() {
             // append option list
             $(this).append('<option value="'+i+'">'+ids[i].name+'</option>');
         }
+        if (type == 'disabled')
+        {
+            $(this).append('<option value="0">(선택불가)</option>');
+        }
     });
     // set default gacha index
     $('#weapon-form .gacha_list').each(function (i,obj) {
