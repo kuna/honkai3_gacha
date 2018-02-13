@@ -255,8 +255,20 @@ $(function() {
     $( ".accordion" ).accordion({ heightStyle: "content" });
     $('#settingdialog').hide();
     $( '.gacha_list' ).each(function() {
+        var rare = $(this).data('rare');
+        var type = $(this).data('type')
         for (var i=0; i<ids.length; i++)
         {
+            // filter by type and rare
+            if (type && type != ids[i].type)
+            {
+                continue;
+            }
+            if (rare && rare != ids[i].rare)
+            {
+                continue;
+            }
+            // append option list
             $(this).append('<option value="'+i+'">'+ids[i].name+'</option>');
         }
     });
@@ -265,6 +277,11 @@ $(function() {
         $(this).val( pickup_weapon[i] );
     });
     $('#extended-form .gacha_list').each(function (i,obj) {
+        var val = pickup_extended[i];
+        if ($(this).find("option[value='"+val+"']").length <= 0)
+        {
+            console.error('val not found: ' + val);
+        }
         $(this).val( pickup_extended[i] );
     });
 });
