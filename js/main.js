@@ -245,11 +245,9 @@ $(function() {
         // set gacha probability
         // is allblue checked?
         var is_allblue = $('#allblue').prop('checked');
-        console.log(is_allblue);
         gacha_dist = get_gacha_dist($(this).data('type'), is_allblue);
 
         // recreate gacha object with given list
-        console.log(pickups);
         gacha = Gacha(gacha_dist, pickups);
     });
     $( ".accordion" ).accordion({ heightStyle: "content" });
@@ -277,11 +275,11 @@ $(function() {
         $(this).val( pickup_weapon[i] );
     });
     $('#extended-form .gacha_list').each(function (i,obj) {
-        var val = pickup_extended[i];
+        /*var val = pickup_extended[i];
         if ($(this).find("option[value='"+val+"']").length <= 0)
         {
             console.error('val not found: ' + val);
-        }
+        }*/
         $(this).val( pickup_extended[i] );
     });
 });

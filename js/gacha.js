@@ -340,10 +340,35 @@ var gacha_dist_valkyrie = {
     // A, A_piece
     'pickups': [
         0.94, 3.0,   // 1.5 --> 0.94
-        1.41, 4.2, 1.41, 4.2,   // 4.5 --> 2.82
+        2.82, 4.8, 0, 0,   // 4.5 --> 2.82
         1.88, 4.0, 1.88, 4.0, 1.88, 4.0,   // 3 --> 1.88
     ],
     'material': 66,
+    'special': false,
+    'ensure_type': 'valkyrie',
+    'ensure_level': 4,
+};
+
+var gacha_dist_valkyrie2 = {
+    's_valkyrie' : 0,
+    's_valkyrie_piece': 0,
+    'a_valkyrie': 0,
+    'a_valkyrie_piece': 0,
+    'b_valkyrie': 0,
+    's_weapon': 0,
+    's_stigmata': 0,
+    'a_weapon': 0,
+    'a_stigmata': 0,
+    'b_weapon': 0,
+    'b_stigmata': 0,
+    // S, S_piece, 
+    // A, A_piece
+    'pickups': [
+        0.94, 3.0,   // 1.5 --> 0.94
+        2.82, 4.8, 2.82, 4.8,   // 4.5 --> 2.82
+        1.41, 1.41, 1.41, 1.41, 2.82, 0.94,   // 2.25 --> 1.41
+    ],
+    'material': 57,
     'special': false,
     'ensure_type': 'valkyrie',
     'ensure_level': 4,
@@ -410,10 +435,35 @@ var gacha_jap_dist_valkyrie = {
     // A, A_piece
     'pickups': [
         1.5, 2.5,
-        2.25,3.75,2.25,3.75,//4.5, 7.5,
+        4.5, 7.5, 0, 0, //4.5, 7.5,
         3.0, 3.0, 3.0, 3.0, 3.0, 3.0,
     ],
     'material': 66,
+    'special': false,
+    'ensure_type': null,
+    'ensure_level': 4,
+};
+
+var gacha_jap_dist_valkyrie2 = {
+    's_valkyrie' : 0,
+    's_valkyrie_piece': 0,
+    'a_valkyrie': 0,
+    'a_valkyrie_piece': 0,
+    'b_valkyrie': 0,
+    's_weapon': 0,
+    's_stigmata': 0,
+    'a_weapon': 0,
+    'a_stigmata': 0,
+    'b_weapon': 0,
+    'b_stigmata': 0,
+    // S, S_piece, 
+    // A, A_piece
+    'pickups': [
+        1.5, 2.5,
+        4.5, 7.5, 4.5, 7.5, //4.5, 7.5,
+        2.25, 2.25, 2.25, 2.25, 4.5, 1.5,
+    ],
+    'material': 57,
     'special': false,
     'ensure_type': null,
     'ensure_level': 4,
@@ -454,11 +504,13 @@ function get_gacha_dist(type, all_blue)
     var server_normal = {
         'normal': gacha_dist_normal,
         'extended': gacha_dist_valkyrie,
+        'extended2': gacha_dist_valkyrie2,
         'weapon': gacha_dist_weapon
     };
     var server_jap = {
         'normal': gacha_jap_dist_normal,
         'extended': gacha_jap_dist_valkyrie,
+        'extended2': gacha_jap_dist_valkyrie2,
         'weapon': gacha_jap_dist_weapon
     };
     if (all_blue)
@@ -527,27 +579,31 @@ var Gacha = function(dist, pickup_ids)
     // generate: category range.
     var prob_accumlated = 0;
     var prob_sum = 0;
-    var prob_recalc = {};
+    var prob_recalc = {'pickups':[]};
+    var prob_dicts = [
+        's_valkyrie','a_valkyrie','b_valkyrie',
+        's_valkyrie_piece','s_valkyrie_piece','s_valkyrie_piece',
+        's_weapon', 's_stigmata','a_weapon', 'a_stigmata','b_weapon', 'b_stigmata',
+    ];
     ensure_type = dist['ensure_type'];
     ensure_level = dist['ensure_level'];
-    for (var i in dist) {
-        if (i == 'special' || i == 'ensure_type'|| i == 'ensure_level') continue;
-        if (i == 'pickups') {
-            for (var j=0; j<dist['pickups'].length; j++)
-                prob_sum += dist['pickups'][j];
-            continue;
-        }
-        prob_sum += dist[i];
+    for (var i=0; i<prob_dicts.length; i++)
+    {
+        var d = prob_dicts[i];
+        prob_sum += dist[d];
     }
-    for (var i in dist) {
-        if (i == 'special' || i == 'ensure_type'|| i == 'ensure_level') continue;
-        if (i == 'pickups') {
-            prob_recalc['pickups'] = [];
-            for (var j=0; j<dist['pickups'].length; j++)
-                prob_recalc['pickups'].push( dist['pickups'][j] / prob_sum );
-            continue;
-        }
-        prob_recalc[i] = dist[i] / prob_sum;
+    for (var i=0; i<dist['pickups'].length; i++)
+    {
+        prob_sum += dist['pickups'][i];
+    }
+    for (var i=0; i<prob_dicts.length; i++)
+    {
+        var d = prob_dicts[i];
+        prob_recalc[d] = dist[d] / prob_sum;
+    }
+    for (var i=0; i<dist['pickups'].length; i++)
+    {
+        prob_recalc['pickups'].push( dist['pickups'][i] / prob_sum );
     }
     prob_accumlated += prob_recalc['b_valkyrie'];
     range_table['valkyrie'][2] = prob_accumlated;
