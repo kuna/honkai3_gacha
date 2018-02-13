@@ -582,7 +582,7 @@ var Gacha = function(dist, pickup_ids)
     var prob_recalc = {'pickups':[]};
     var prob_dicts = [
         's_valkyrie','a_valkyrie','b_valkyrie',
-        's_valkyrie_piece','s_valkyrie_piece','s_valkyrie_piece',
+        's_valkyrie_piece','a_valkyrie_piece',
         's_weapon', 's_stigmata','a_weapon', 'a_stigmata','b_weapon', 'b_stigmata',
     ];
     ensure_type = dist['ensure_type'];
