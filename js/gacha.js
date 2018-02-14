@@ -31,42 +31,44 @@ var ids = [
 
     {'type':'valkyrie', 'name':'은랑의 여명', 'rare':4, 'img':'valkyrie/bronya-silver-wolf.png', special:true},
     {'type':'valkyrie', 'name':'이능 흑핵 침식', 'rare':5, 'img':'valkyrie/bronya_xenos_icon.png', special:true},
-    {'type':'valkyrie', 'name':'후카', 'rare':5, 'img':'valkyrie/fuka_icon.png'},
+    {'type':'valkyrie', 'name':'후카', 'rare':4, 'img':'valkyrie/fuka_icon.png'},
+    {'type':'valkyrie', 'name':'카렌', 'rare':4, 'img':'valkyrie/kallen_c1_icon.png', special:true},
 
 
 
-    {'type':'valkyrie_piece', 'name':'투예복 백련 조각', 'rare':3, 'img':'valkyrie/piece.png'},
-    {'type':'valkyrie_piece', 'name':'발키리 레인저 조각', 'rare':4, 'img':'valkyrie/piece.png'},
-    {'type':'valkyrie_piece', 'name':'성녀의 기도 조각', 'rare':4, 'img':'valkyrie/piece.png'},
-    {'type':'valkyrie_piece', 'name':'백기사 월광 조각', 'rare':5, 'img':'valkyrie/piece.png'},
+    {'type':'valkyrie_piece', 'name':'투예복 백련 조각', 'rare':3, 'img':'valkyrie/kiana_pt_piece.png'},
+    {'type':'valkyrie_piece', 'name':'발키리 레인저 조각', 'rare':4, 'img':'valkyrie/kiana_c1_piece.png'},
+    {'type':'valkyrie_piece', 'name':'성녀의 기도 조각', 'rare':4, 'img':'valkyrie/kiana_c3_piece.png'},
+    {'type':'valkyrie_piece', 'name':'백기사 월광 조각', 'rare':5, 'img':'valkyrie/kiana_c4_piece.png'},
     
-    {'type':'valkyrie_piece', 'name':'펄스 슈트 비홍 조각', 'rare':3, 'img':'valkyrie/piece.png'},
-    {'type':'valkyrie_piece', 'name':'발키리 스트라이크 조각', 'rare':4, 'img':'valkyrie/piece.png'},
-    {'type':'valkyrie_piece', 'name':'그림자의 춤 조각', 'rare':4, 'img':'valkyrie/piece.png'},
-    {'type':'valkyrie_piece', 'name':'뇌전 여왕의 귀신 갑주 조각', 'rare':5, 'img':'valkyrie/piece.png'},
+    {'type':'valkyrie_piece', 'name':'펄스 슈트 비홍 조각', 'rare':3, 'img':'valkyrie/mei_c2_piece.png'},
+    {'type':'valkyrie_piece', 'name':'발키리 스트라이크 조각', 'rare':4, 'img':'valkyrie/mei_c1_piece.png'},
+    {'type':'valkyrie_piece', 'name':'그림자의 춤 조각', 'rare':4, 'img':'valkyrie/mei_c3_piece.png'},
+    {'type':'valkyrie_piece', 'name':'뇌전 여왕의 귀신 갑주 조각', 'rare':5, 'img':'valkyrie/mei_c4_piece.png'},
     
-    {'type':'valkyrie_piece', 'name':'발키리 채리엇 조각', 'rare':3, 'img':'valkyrie/piece.png'},
-    {'type':'valkyrie_piece', 'name':'기동 장갑 황매화 조각', 'rare':4, 'img':'valkyrie/piece.png'},
-    {'type':'valkyrie_piece', 'name':'설원 저격수 조각', 'rare':4, 'img':'valkyrie/piece.png'},
-    {'type':'valkyrie_piece', 'name':'차원 경계 돌파 조각', 'rare':5, 'img':'valkyrie/piece.png'},
+    {'type':'valkyrie_piece', 'name':'발키리 채리엇 조각', 'rare':3, 'img':'valkyrie/bronya_c1_piece.png'},
+    {'type':'valkyrie_piece', 'name':'기동 장갑 황매화 조각', 'rare':4, 'img':'valkyrie/bronya_c2_piece.png'},
+    {'type':'valkyrie_piece', 'name':'설원 저격수 조각', 'rare':4, 'img':'valkyrie/bronya_c3_piece.png'},
+    {'type':'valkyrie_piece', 'name':'차원 경계 돌파 조각', 'rare':5, 'img':'valkyrie/bronya_c4_piece.png'},
     
-    {'type':'valkyrie_piece', 'name':'전장의 질풍 조각', 'rare':3, 'img':'valkyrie/piece.png'},
-    {'type':'valkyrie_piece', 'name':'퓨전 아머 스칼렛 조각', 'rare':4, 'img':'valkyrie/piece.png'},
-    {'type':'valkyrie_piece', 'name':'발키리 개선 조각', 'rare':4, 'img':'valkyrie/piece.png'},
-    {'type':'valkyrie_piece', 'name':'핏빛 장미 조각', 'rare':5, 'img':'valkyrie/piece.png'},
+    {'type':'valkyrie_piece', 'name':'전장의 질풍 조각', 'rare':3, 'img':'valkyrie/himeko_c3_piece.png'},
+    {'type':'valkyrie_piece', 'name':'퓨전 아머 스칼렛 조각', 'rare':4, 'img':'valkyrie/himeko_c2_piece.png'},
+    {'type':'valkyrie_piece', 'name':'발키리 개선 조각', 'rare':4, 'img':'valkyrie/himeko_c4_piece.png'},
+    {'type':'valkyrie_piece', 'name':'핏빛 장미 조각', 'rare':5, 'img':'valkyrie/himeko_c5_piece.png'},
     
-    {'type':'valkyrie_piece', 'name':'역신 무녀 조각', 'rare':4, 'img':'valkyrie/piece.png', 'special':true},
-    {'type':'valkyrie_piece', 'name':'진염행혼 조각', 'rare':4, 'img':'valkyrie/piece.png', 'special':true},
-    {'type':'valkyrie_piece', 'name':'헌신화 물망초 조각', 'rare':5, 'img':'valkyrie/piece.png', 'special':true},
+    {'type':'valkyrie_piece', 'name':'역신 무녀 조각', 'rare':4, 'img':'valkyrie/sakura_c1_piece.png', 'special':true},
+    {'type':'valkyrie_piece', 'name':'진염행혼 조각', 'rare':4, 'img':'valkyrie/sakura_c3-2_piece.png', 'special':true},
+    {'type':'valkyrie_piece', 'name':'헌신화 물망초 조각', 'rare':5, 'img':'valkyrie/sakura_c2_piece.png', 'special':true},
     
-    {'type':'valkyrie_piece', 'name':'발키리 서약 조각', 'rare':4, 'img':'valkyrie/piece.png'},
-    {'type':'valkyrie_piece', 'name':'처형복 반혼초 조각', 'rare':5, 'img':'valkyrie/piece.png'},
-    {'type':'valkyrie_piece', 'name':'앵화윤무 조각', 'rare':4, 'img':'valkyrie/piece.png'},
-    {'type':'valkyrie_piece', 'name':'신은송가 조각', 'rare':5, 'img':'valkyrie/piece.png'},
+    {'type':'valkyrie_piece', 'name':'발키리 서약 조각', 'rare':4, 'img':'valkyrie/theresa_c1_piece.png'},
+    {'type':'valkyrie_piece', 'name':'처형복 반혼초 조각', 'rare':5, 'img':'valkyrie/theresa_c2_piece.png'},
+    {'type':'valkyrie_piece', 'name':'앵화윤무 조각', 'rare':4, 'img':'valkyrie/theresa_c3_piece.png'},
+    {'type':'valkyrie_piece', 'name':'신은송가 조각', 'rare':5, 'img':'valkyrie/theresa_c4_piece.png'},
 
-    {'type':'valkyrie_piece', 'name':'은랑의 여명 조각', 'rare':4, 'img':'valkyrie/piece.png', special:true},
-    {'type':'valkyrie_piece', 'name':'이능 흑핵 침식 조각', 'rare':5, 'img':'valkyrie/piece.png', special:true},
-    {'type':'valkyrie_piece', 'name':'후카 조각', 'rare':5, 'img':'valkyrie/piece.png'},
+    {'type':'valkyrie_piece', 'name':'은랑의 여명 조각', 'rare':4, 'img':'valkyrie//bronya-silver-wolf_piece.png', special:true},
+    {'type':'valkyrie_piece', 'name':'이능 흑핵 침식 조각', 'rare':5, 'img':'valkyrie/bronya_xenos_piece.png', special:true},
+    {'type':'valkyrie_piece', 'name':'후카 조각', 'rare':4, 'img':'valkyrie/fuka_piece.png'},
+    {'type':'valkyrie_piece', 'name':'카렌 조각', 'rare':4, 'img':'valkyrie/kallen_c1_piece.png', special:true},
 
     
     // weapons
