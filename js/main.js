@@ -28,19 +28,19 @@ var pickup_weapon =
 ];
 var pickup_extended = 
 [
-    get_object_idx('차원 경계 돌파'), 
-    get_object_idx('차원 경계 돌파 조각'),
+    get_object_idx('뇌전 여왕의 귀신 갑주'), 
+    get_object_idx('뇌전 여왕의 귀신 갑주 조각'),
     //
-    get_object_idx('설원 저격수'), 
-    get_object_idx('설원 저격수 조각'),
-    get_object_idx('기동 장갑 황매화'), 
-    get_object_idx('기동 장갑 황매화 조각'),
-    get_object_idx('발키리 채리엇'), 
-    get_object_idx('발키리 채리엇 조각'),
     get_object_idx('발키리 스트라이크'), 
     get_object_idx('발키리 스트라이크 조각'),
-    get_object_idx('발키리 레인저'), 
-    get_object_idx('발키리 레인저 조각'),
+    get_object_idx('그림자의 춤'), 
+    get_object_idx('그림자의 춤 조각'),
+    get_object_idx('기동 장갑 황매화'), 
+    get_object_idx('기동 장갑 황매화 조각'),
+    get_object_idx('발키리 개선'), 
+    get_object_idx('발키리 개선 조각'),
+    get_object_idx('펄스 슈트 비홍'), 
+    get_object_idx('펄스 슈트 비홍 조각'),
 ];
 
 
