@@ -29,7 +29,7 @@ var ids = [
     {'type':'valkyrie', 'name':'앵화윤무', 'rare':4, 'img':'valkyrie/theresa_c3_icon.png'},
     {'type':'valkyrie', 'name':'신은송가', 'rare':5, 'img':'valkyrie/theresa_c4_icon.png'},
 
-    {'type':'valkyrie', 'name':'은랑의 여명', 'rare':4, 'img':'valkyrie/bronya-silver-wolf.png', special:true},
+    {'type':'valkyrie', 'name':'은랑의 여명', 'rare':4, 'img':'valkyrie/bronya-silver-wolf.jpg', special:true},
     {'type':'valkyrie', 'name':'이능 흑핵 침식', 'rare':5, 'img':'valkyrie/bronya_xenos_icon.png', special:true},
     {'type':'valkyrie', 'name':'후카', 'rare':4, 'img':'valkyrie/fuka_icon.png'},
     {'type':'valkyrie', 'name':'카렌', 'rare':4, 'img':'valkyrie/kallen_c1_icon.png', special:true},
