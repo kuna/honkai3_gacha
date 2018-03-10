@@ -687,7 +687,7 @@ var Gacha = function(dist, pickup_ids)
                         // clear count.
                         if ((types[i] == ensure_type || obj.type == ensure_type) && obj.rare >= ensure_level)
                         {
-                            console.log('가챠 스택 초기화');
+                            //console.log('가챠 스택 초기화');
                             count = 0;
                             is_pickup = true;
                         } else {
@@ -719,7 +719,7 @@ var Gacha = function(dist, pickup_ids)
             count ++;
             if (count % 10 == 0 && ensure_type != null) {
                 count = 0;
-                console.log('확정 가챠 수행');
+                //console.log('확정 가챠 수행');
                 return this.ensure_gacha();
             }
             return this._gacha();
@@ -738,3 +738,152 @@ var Gacha = function(dist, pickup_ids)
     }
     return gacha;
 };
+
+
+
+
+
+
+
+/* only for probability test */
+function _gacha_test()
+{
+	var _gacha_stat = {};
+	var _gacha_stat_init = function()
+	{
+		_gacha_stat = {}
+	}
+	var _gacha_stat_append = function(g)
+	{
+		var type = g['type'] + g['rare'];
+		if (!(type in _gacha_stat))
+		{
+			_gacha_stat[type] = 0;
+		}
+		_gacha_stat[type] += 1;
+	}
+	var _gacha_stat_str = function()
+	{
+		var tot = 0;
+		var g = {};
+		for (var k in _gacha_stat)
+		{
+			tot += _gacha_stat[k];
+		}
+		for (var k in _gacha_stat)
+		{
+			g[k] = _gacha_stat[k] / tot;
+		}
+		var msg = 'valkyrie-5: ' + g['valkyrie5'] + '\n' +
+			'valkyrie-4: ' + g['valkyrie4'] + '\n' +
+			'weapon-5: ' + g['weapon5'] + '\n' +
+			'weapon-4: ' + g['weapon4'] + '\n' +
+			'stigmata-5: ' + g['stigmata5'] + '\n' +
+			'stigmata-4: ' + g['stigmata4'];
+		return msg
+	}
+
+	//pickup_weapon
+	//pickup_extended
+	var epoch = 10000;
+
+	var _g = Gacha(get_gacha_dist('normal', false), []);
+	console.log('testing kor ver probability ...');	
+	_gacha_stat_init();
+	for (var i=0; i<epoch; i++)
+	{
+		_gacha_stat_append(_g.gacha());
+	}
+	var gacha_normal_kor_res = _gacha_stat_str();
+
+	_gacha = Gacha(get_gacha_dist('normal', true), []);
+	console.log('testing jap ver probability ...');
+	_gacha_stat_init();
+	for (var i=0; i<epoch; i++)
+	{
+		_gacha_stat_append(_g.gacha());
+	}
+	var gacha_normal_jap_res = _gacha_stat_str();
+
+
+
+	var _g = Gacha(get_gacha_dist('weapon', false), pickup_weapon);
+	console.log('testing kor ver probability ...');	
+	_gacha_stat_init();
+	for (var i=0; i<epoch; i++)
+	{
+		_gacha_stat_append(_g.gacha());
+	}
+	var gacha_w_kor_res = _gacha_stat_str();
+
+	_gacha = Gacha(get_gacha_dist('weapon', true), pickup_weapon);
+	console.log('testing jap ver probability ...');
+	_gacha_stat_init();
+	for (var i=0; i<epoch; i++)
+	{
+		_gacha_stat_append(_g.gacha());
+	}
+	var gacha_w_jap_res = _gacha_stat_str();
+
+
+
+	var _g = Gacha(get_gacha_dist('extended', false), pickup_extended);
+	console.log('testing kor ver probability ...');	
+	_gacha_stat_init();
+	for (var i=0; i<epoch; i++)
+	{
+		_gacha_stat_append(_g.gacha());
+	}
+	var gacha_ex_kor_res = _gacha_stat_str();
+
+	_gacha = Gacha(get_gacha_dist('extended', true), pickup_extended);
+	console.log('testing jap ver probability ...');
+	_gacha_stat_init();
+	for (var i=0; i<epoch; i++)
+	{
+		_gacha_stat_append(_g.gacha());
+	}
+	var gacha_ex_jap_res = _gacha_stat_str();
+
+
+
+	var _g = Gacha(get_gacha_dist('extended2', false), pickup_extended);
+	console.log('testing kor ver probability ...');	
+	_gacha_stat_init();
+	for (var i=0; i<epoch; i++)
+	{
+		_gacha_stat_append(_g.gacha());
+	}
+	var gacha_ex2_kor_res = _gacha_stat_str();
+
+	_gacha = Gacha(get_gacha_dist('extended2', true), pickup_extended);
+	console.log('testing jap ver probability ...');
+	_gacha_stat_init();
+	for (var i=0; i<epoch; i++)
+	{
+		_gacha_stat_append(_g.gacha());
+	}
+	var gacha_ex2_jap_res = _gacha_stat_str();
+
+
+
+	console.log("NORMAL KOR");
+	console.log(gacha_normal_kor_res);
+	console.log("NORMAL JAP");
+	console.log(gacha_normal_jap_res);
+
+	console.log("WEAPON KOR");
+	console.log(gacha_w_kor_res);
+	console.log("WEAPON JAP");
+	console.log(gacha_w_jap_res);
+
+	console.log("EX KOR");
+	console.log(gacha_ex_kor_res);
+	console.log("EX JAP");
+	console.log(gacha_ex_jap_res);
+
+	console.log("EX2 KOR");
+	console.log(gacha_ex2_kor_res);
+	console.log("EX2 JAP");
+	console.log(gacha_ex2_jap_res);
+}
