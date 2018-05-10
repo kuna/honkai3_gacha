@@ -28,17 +28,17 @@ var pickup_weapon =
 ];
 var pickup_extended = 
 [
-    get_object_idx('이능 흑핵 침식'), 
-    get_object_idx('이능 흑핵 침식 조각'),
+    get_object_idx('신은송가'), 
+    get_object_idx('신은송가 조각'),
     //
-    get_object_idx('은랑의 여명'), 
-    get_object_idx('은랑의 여명 조각'),
-    get_object_idx('은랑의 여명'), 
-    get_object_idx('은랑의 여명 조각'),
-    get_object_idx('그림자의 춤'), 
-    get_object_idx('그림자의 춤 조각'),
-    get_object_idx('발키리 스트라이크'), 
-    get_object_idx('발키리 스트라이크 조각'),
+    get_object_idx('카렌'), 
+    get_object_idx('카렌 조각'),
+    get_object_idx('카렌'), 
+    get_object_idx('카렌 조각'),
+    get_object_idx('역신 무녀'), 
+    get_object_idx('역신 무녀 조각'),
+    get_object_idx('앵화윤무'), 
+    get_object_idx('앵화윤무 조각'),
     get_object_idx('기동 장갑 황매화'), 
     get_object_idx('기동 장갑 황매화 조각'),
 ];
